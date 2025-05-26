@@ -14,3 +14,18 @@ class quiz_game:
                 correct = lines[i+5].strip()
                 questions.append(Question(q_text, opts, correct))
         return questions
+
+    def start(self):
+        if not self.questions:
+            print("No questions available.")
+            return
+
+        while True:
+            print(f"\n{len(self.questions)} questions are available.")
+            try:
+                num = int(input(f"How many questions would you like to answer? (Max: {len(self.questions)}): "))
+            except ValueError:
+                print("Invalid input.")
+                continue
+            num = min(num, len(self.questions))
+            score = 0
