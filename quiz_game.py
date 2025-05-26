@@ -33,6 +33,8 @@ class quiz_game:
             selected = random.sample(self.questions, num)
             score = 0
             
-if __name__ == "__main__":
-    game = quiz_game()
-    game.start()
+            for q in selected:
+                print("\n" + q.text)
+                labels = ['A', 'B', 'C', 'D']
+                for i, opt in enumerate(q.options):
+                    print(f"{labels[i]}) {opt}")
