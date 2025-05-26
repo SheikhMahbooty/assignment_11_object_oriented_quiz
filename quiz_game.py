@@ -1,3 +1,5 @@
+import random
+
 class quiz_game:
     def __init__(self, filename="quiz_questions.txt"):
         self.filename = filename
@@ -28,4 +30,5 @@ class quiz_game:
                 print("Invalid input.")
                 continue
             num = min(num, len(self.questions))
+            selected = random.sample(self.questions, num)
             score = 0
