@@ -1,4 +1,4 @@
-class question_list:
+class Question_List:
     def __init__(self, text, options, correct_answer):
         self.text = text
         self.options = options
