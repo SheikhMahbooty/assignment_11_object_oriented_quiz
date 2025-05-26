@@ -22,3 +22,7 @@ class QuizCreator:
                         correct_answer = options['abcd'.index(correct_letter)]
                         break
                     print("Invalid input, enter a/b/c/d.")
+
+if __name__ == "__main__":
+    creator = QuizCreator()
+    creator.create_question()
