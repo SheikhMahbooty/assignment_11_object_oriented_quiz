@@ -1,4 +1,4 @@
-class QuizCreator:
+class quiz_creator:
     def __init__(self, filename="quiz_questions.txt"):
         self.filename = filename
         
