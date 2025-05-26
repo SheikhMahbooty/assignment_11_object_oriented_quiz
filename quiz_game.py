@@ -38,3 +38,22 @@ class quiz_game:
                 labels = ['A', 'B', 'C', 'D']
                 for i, opt in enumerate(q.options):
                     print(f"{labels[i]}) {opt}")
+                    
+                while True:
+                    ans = input("\nEnter the correct answer (a/b/c/d): ").strip().upper()
+                    if ans in labels:
+                        break
+                    print("Invalid input. Please enter A, B, C, or D.")
+
+                if q.is_correct(labels.index(ans)):
+                    print("Correct!\n")
+                    score += 1
+                else:
+                    print(f"Wrong! The correct answer was: {q.correct_answer}")
+                    
+
+            print(f"You got {score} out of {num} correct!")
+            again = input("\nDo you want to restart the quiz? (y/n): ").strip().lower()
+            if again != 'y':
+                print("Thank you for playing!")
+                break
