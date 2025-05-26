@@ -32,3 +32,7 @@ class quiz_game:
             num = min(num, len(self.questions))
             selected = random.sample(self.questions, num)
             score = 0
+            
+if __name__ == "__main__":
+    game = quiz_game()
+    game.start()
