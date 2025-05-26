@@ -22,6 +22,19 @@ class QuizCreator:
                         correct_answer = options['abcd'.index(correct_letter)]
                         break
                     print("Invalid input, enter a/b/c/d.")
+                    
+                
+                file.write(f"{question}\n")
+                for opt in options:
+                    file.write(f"{opt}\n")
+                file.write(f"{correct_answer}")
+
+                print("\nThe inputted question is:", question)
+                print("a.", options[0])
+                print("b.", options[1])
+                print("c.", options[2])
+                print("d.", options[3])
+                print("The correct answer is:", correct_answer)
 
 if __name__ == "__main__":
     creator = QuizCreator()
