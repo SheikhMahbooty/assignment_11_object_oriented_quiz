@@ -1,3 +1,4 @@
+from question_list import Question
 import random
 
 class QuizGame:
